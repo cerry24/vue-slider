@@ -56,6 +56,10 @@ createApp ({
 
         autoPlay() {
             this.interval = setInterval(this.changeNxtSlide, 3000);
+        },
+
+        autoPlayPauser() {
+            clearInterval(this.interval);
         }
     },
 
