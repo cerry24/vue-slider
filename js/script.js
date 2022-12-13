@@ -31,6 +31,7 @@ createApp ({
                 }
             ],
             activeIndex : 0,
+            interval : null
         }
     },
 
@@ -51,6 +52,14 @@ createApp ({
 
         showSlide(thumbIndex) {
             this.activeIndex = thumbIndex;
+        },
+
+        autoPlay() {
+            this.interval = setInterval(this.changeNxtSlide, 3000);
         }
+    },
+
+    created() {
+        this.autoPlay();
     }
 }).mount('#app');
