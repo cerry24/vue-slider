@@ -47,6 +47,10 @@ createApp ({
             if ( this.activeIndex >= this.images.length ) {
                 this.activeIndex = 0;
             }
+        },
+
+        showSlide(thumbIndex) {
+            this.activeIndex = thumbIndex;
         }
     }
 }).mount('#app');
