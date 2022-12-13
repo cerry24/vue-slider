@@ -32,5 +32,21 @@ createApp ({
             ],
             activeIndex : 0,
         }
+    },
+
+    methods: {
+        changePrevSlide() {
+            this.activeIndex--;
+            if ( this.activeIndex < 0 ) {
+                this.activeIndex = this.images.length - 1;
+            }
+        },
+
+        changeNxtSlide() {
+            this.activeIndex++;
+            if ( this.activeIndex >= this.images.length ) {
+                this.activeIndex = 0;
+            }
+        }
     }
 }).mount('#app');
